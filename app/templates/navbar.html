@@ -1,0 +1,21 @@
+<!--
+<nav>
+    <ul>
+        <img src="{{ url_for('static', filename='images/pokemon5.jpg')}}" alt="">
+        <li><a href="{{ url_for('index')}}">Boton Inicio</a></li>
+        <li><a href="https://ww.google.com"> Boton google</a></li>
+    </ul>
+</nav>
+-->
+<nav class="navbar navbar-default">
+    <img src="{{ url_for('static', filename='images/pokemon5.jpg')}}" alt="">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Flask App</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="{{ url_for('index')}}">Boton Inicio</a></li>
+        <li><a href="https://ww.google.com"> Boton google</a></li>
+      </ul>
+    </div>
+  </nav>
