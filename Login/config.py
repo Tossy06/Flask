@@ -2,9 +2,9 @@ import os
 
 class Config:
     DATABASE = {
-        'user' : 'david',
+        'user' : 'postgres',
         'password' : 'Santi_Aleja',
-        'host' : '127.0.0.1',
-        'port' : '5432',
+        'host' : 'localhost',
+        'port' : 5432,
         'database' : 'login_db'
     }
