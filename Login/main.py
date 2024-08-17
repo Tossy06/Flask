@@ -12,7 +12,8 @@ def get_db_connection():
 
 @app.route('/index')
 def index():
-    return render_template('index.html')
+    username = request.args.get('username')  # Recoge 'username' de la URL
+    return render_template('index.html', username=username)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -30,7 +31,7 @@ def login():
         if user and check_password_hash(user[2], password):  # Asume que la contraseña está en la tercera columna
             session['username'] = username
             flash('Login successful!', 'success')
-            return redirect(url_for('index'))
+            return redirect(url_for('index', username= username))
         else:
             return render_template('error.html')
         

@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content-login{
+    display:  grid;
+    place-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.content-login h1{
+    margin-top: 50px;
+}
+
+.content-login form{
+    display: flex;
+    gap:  10px;
+    flex-direction: column;
+}
+
+.content-login input{
+    padding: 10px;
+    border: 1px solid;
+}
+
+.content-login button{
+    border-radius: 5px;
+    align-content: center;
+    border: none;
+    cursor: pointer;
+    background-color: #007bff;
+    width: 100%;
+    color: azure;
+}
