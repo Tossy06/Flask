@@ -8,11 +8,10 @@
 <body>
     <div class="content-login">
         <h1>Login</h1>
-        <form method="post">
+        <form method="POST" action="{{ url_for('login') }}">
             <p><input type="text" name = 'username' placeholder="Username" required></p>
             <p><input type="password" name = 'password' placeholder="Username" required></p>
-            <p><input type="submit" name = 'Login' value="Login"></p>
-          
+            <p><button type="submit">Login</button></p>
         </form>
     </div>
 </body>
