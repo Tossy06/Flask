@@ -8,7 +8,7 @@ body{
     background-color: #008080;
 }
 
-.content-login{
+.content-register{
     display:  grid;
     place-items: center;
     height: 100vh;
@@ -22,15 +22,16 @@ body{
 }
 
 .content-form h1{
+    margin-top: 50px;
+    text-align: center;
     margin: 20px;
-    color: aliceblue;
+    color: #fff;
 }
 
 .content-form form{
     display: flex;
     gap:  10px;
     flex-direction: column;
-    font-family: serif;
     
 }
 
@@ -55,11 +56,4 @@ body{
 }
 .content-form button:hover{
     background-color: #0056b3;
-}
-
-.content-form a{
-    color: #fff;
-}
-.content-form a:hover{
-    color: #e4d9d9;
 }
