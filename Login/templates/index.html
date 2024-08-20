@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{url_for ('static', filename='css/index.css')}}">
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
     <title>Document</title>
 </head>
 <body>
     {% if username %}
         <h1>Bienvenid@ {{username}}</h1>
     {% endif %}
-    <div class="player">
-        <div class="img-player">
-            <img src="" alt="">
+    <div class="gamearea">
+        <div class="img-player" id = 'img'>
+            <img src="{{ url_for('static', filename='img/player-img.png') }}" alt="">
         </div>
     </div>
 </body>

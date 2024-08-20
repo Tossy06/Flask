@@ -3,10 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: #008080;
+}
 
-.player{
+.gamearea {
     display: grid;
     place-items: center;
     height: 100vh;
-    background-color: brown;
+    position: relative; /* Necesario para que el movimiento del jugador funcione correctamente */
+}
+
+.img-player {
+    position: absolute; /* Permite el movimiento del elemento */
+    top: 0;
+    left: 0;
+    transition: top 0.1s linear, left 0.1s linear; /* Añadido para suavizar el movimiento */
 }
