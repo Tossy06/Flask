@@ -36,9 +36,9 @@ def index():
     model = LinearRegression()
     model.fit(x_train, y_train)
 
-    new_temp_min_value = df[['temp_min']].mean() + 1.0
+    new_temp_min_value = df[['temp_min']].mean() + 1.2
     temp_pred = model.predict([new_temp_min_value])
-    return render_template('index.html', predict = temp_pred[0])
+    return render_template('index.html', predict = temp_pred[0], estimation = new_temp_min_value[0])
 
 app.run(host='0.0.0.0', port= 3000, debug= True)
 
