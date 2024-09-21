@@ -1,9 +1,10 @@
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request, redirect, url_for, session, flash
 import psycopg2
 from werkzeug.security import generate_password_hash, check_password_hash
 from config import Confi
 
 app = Flask(__name__)
+app.secret_key = 'supersecretKey'
 
 
 #Create conection whith data base
@@ -51,13 +52,16 @@ def login():
         conne.close()
 
         if user and check_password_hash(user[1], password):
-            return redirect(url_for('index'))
+            session['username'] = username
+            flash('Login successful!', 'success')
+            return redirect(url_for('index', username= username))
     return render_template('login.html')
 
 
 @app.route('/index' )
 def index():
-    return render_template('index.html')
+   username = request.args.get('username') # Get 'usernmae' from url
+   return render_template('index.html', username=username)
 
 if __name__ == '__main__':
     app.run(port=3050, host='0.0.0.0', debug=True)
