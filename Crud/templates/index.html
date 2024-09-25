@@ -4,9 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{url_for ('static', filename= 'css/index.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Bienvenid@ {{username}}</h1>
+    <div class="bienvenida">
+        <h1 class="txt">Bienvenid@ {{username}}</h1>
+    </div>
+
+    <div class="principal">
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#", class="logo">
+                            <img src="/static/img/logo.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fas fa-user"></i>
+                        <span class="item-nav">
+                            Notas de: {{username}}
+                        </span>
+                    </li>
+                    <li>
+                        <i class="fas fa-search"></i>
+                        <span class="item-nav">
+                            <input type="text" placeholder="Buscar">
+                        </span>
+                    </li>
+                    <li>
+                        <i class="fas fa-home"></i>
+                        <span class="item-nav">
+                            <a href="#">Inicio</a>
+                        </span>
+                    </li>
+                    <li>
+                        <i class="fas fa-plus"></i>
+                        <span class="item-nav">
+                            <button>Crear</button>
+                        </span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+    <script src="{{url_for('static', filename ='js/index.js')}}"></script>
 </body>
 </html>

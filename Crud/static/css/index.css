@@ -2,4 +2,63 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+body{
+    background-color: bisque;
+}
+.bienvenida{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.principal{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 200px;
+    left: 0;
+    background: transparent;
+    background-color: #fff;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, .1);
+}
+
+.logo{
+    display: flex;
+    transition:  all 0.5s ease;
+}
+.menu img{
+    width: 35px;
+    height: 35px;
+}
+.menu ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.menu nav{
+    padding: 10px;
+    color: black;
+    font-size: 16px;
+}
+.menu input{
+    width: 150px;
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, .2);
+}
+.menu input:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+}
+.menu button{
+    height: 20px;
+    width: 105px;
+}
+.menu button:hover{
+    background-color: rgb(204, 206, 207);
+    cursor: pointer;
 }
