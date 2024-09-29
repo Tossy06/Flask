@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function(){
         if(i < contenido.length){
             bienvenida.textContent += contenido.charAt(i);
             i++;
-            setTimeout(Typewrite,100)
+            setTimeout(Typewrite,95)
         }else{
             setTimeout(borrar, 1000)
         }
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function(){
         if(i >=0){
             bienvenida.textContent = contenido.substring(0, i);
             i--;
-            setTimeout(borrar, 100)
+            setTimeout(borrar, 95)
         }
         else{
             controlvistas()
